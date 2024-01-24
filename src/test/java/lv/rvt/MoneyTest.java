@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import rvt.Money;
+import rvt.Money.Money;
 
 public class MoneyTest {
     
