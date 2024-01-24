@@ -60,10 +60,8 @@ public class Money {
         if (this.euros < compared.euros) {
             return true;
         } 
-        else if (this.euros == compared.euros) {
-            if (this.cents < compared.cents){
+        else if (this.euros == compared.euros && this.cents < compared.cents) {
                 return true;
-            }
         }
         else{
             return false;
