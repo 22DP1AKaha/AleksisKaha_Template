@@ -1,5 +1,7 @@
 package rvt;
 
+import rvt.temp.A;
+import java.util.Arrays;
 
 public class Sorting {
     public static int smallest(int[] array){
@@ -42,6 +44,14 @@ public class Sorting {
         int temp = array[index1];
         array[index1] = array[index2];
         array[index2] = temp;
+    }
+
+    public static void sort(int[] array) {
+        for (int i = 0; i < array.length; i++){
+            swap(array, i, indexOfSmallestFrom(array, 1));
+            System.out.println(Arrays.toString(array));
+        }
+        
     }
 
 
