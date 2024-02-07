@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class DefaultController {
@@ -21,6 +22,15 @@ public class DefaultController {
         String group = "DP2-1";
         model.addAttribute(age);
         return "about";
+    }
+
+     @GetMapping(value = "/test")
+    @ResponseBody
+    public String testAction() {
+
+        Person person = new Person("John", "NewYork");
+
+        return person.toString() + "<br>";
     }
 
     
